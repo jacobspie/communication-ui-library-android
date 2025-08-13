@@ -92,7 +92,7 @@ internal fun ActionBarView(
 @Composable
 internal fun PreviewActionBarView() {
     ActionBarView(
-        subTitle = stringResource(id = R.string.azure_communication_ui_chat_count_people, 4),
+        subTitle = null,
         title = "Topic",
         onTitleClicked = {}
     ) {}

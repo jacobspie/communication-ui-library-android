@@ -70,10 +70,7 @@ internal fun ChatScreen(
                 viewModel.chatTopic != null -> viewModel.chatTopic
                 else -> stringResource(R.string.azure_communication_ui_chat_chat_action_bar_title)
             }
-            val subTitle = stringResource(
-                id = R.string.azure_communication_ui_chat_count_people,
-                viewModel.participants.count()
-            )
+            val subTitle = null
 
             ActionBarView(
                 title = topic,
