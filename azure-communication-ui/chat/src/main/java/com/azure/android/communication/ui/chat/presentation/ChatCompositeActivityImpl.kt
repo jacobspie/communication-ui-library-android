@@ -34,7 +34,11 @@ internal class ChatCompositeActivityImpl : AppCompatActivity() {
                 val statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
                 val navBarHeight = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
 
-                view.updatePadding(top = statusBarHeight, bottom = navBarHeight)
+                val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
+
+                val bottomPadding = maxOf(navBarHeight, imeHeight)
+
+                view.updatePadding(top = statusBarHeight, bottom = bottomPadding)
 
                 insets
             }
